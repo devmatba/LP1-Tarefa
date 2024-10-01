@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="340.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.lp1javafx.CadeiraController">
+   <children>
+      <TextField fx:id="txtMaterial" layoutX="77.0" layoutY="59.0" prefHeight="31.0" prefWidth="232.0" />
+      <TextField fx:id="txtCor" layoutX="77.0" layoutY="112.0" prefHeight="31.0" prefWidth="232.0" />
+      <TextField fx:id="txtAltura" layoutX="77.0" layoutY="159.0" prefHeight="31.0" prefWidth="232.0" />
+      <Text layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material:" />
+      <Text layoutX="43.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor:" />
+      <Text layoutX="27.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altura:" />
+      <Button fx:id="btnCriarCadeira" layoutX="151.0" layoutY="208.0" mnemonicParsing="false" onAction="#criarCadeira" text="Adicionar" />
+      <Label fx:id="infoCadeira" contentDisplay="CENTER" layoutX="60.0" layoutY="239.0" prefHeight="21.0" prefWidth="322.0" />
+      <Button layoutX="139.0" layoutY="270.0" mnemonicParsing="false" onAction="#ajustarAltura" text="AjustarAltura" />
+      <Button layoutX="70.0" layoutY="270.0" mnemonicParsing="false" onAction="#sentar" text="Sentar" />
+      <Button layoutX="252.0" layoutY="270.0" mnemonicParsing="false" onAction="#reclinar" text="Reclinar" />
+      <Label fx:id="acaoCadeira" contentDisplay="CENTER" layoutX="60.0" layoutY="312.0" prefHeight="21.0" prefWidth="322.0" textAlignment="JUSTIFY" />
+      <Label layoutX="157.0" layoutY="22.0" prefHeight="28.0" prefWidth="73.0" text="Cadeira" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
