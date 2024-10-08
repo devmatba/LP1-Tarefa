@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="product.lp1javafx.RelogioController">
+    <Label fx:id="relogioLabel" layoutX="50" layoutY="50" text="00:00:00"/>
+
+    <!-- Campos para definir hora inicial e despertar -->
+    <TextField fx:id="horaInicialField" layoutX="50" layoutY="100" promptText="HH" />
+    <TextField fx:id="minutoInicialField" layoutX="120" layoutY="100" promptText="MM" />
+
+    <TextField fx:id="horaAlarmeField" layoutX="50" layoutY="150" promptText="HH" />
+    <TextField fx:id="minutoAlarmeField" layoutX="120" layoutY="150" promptText="MM" />
+
+    <Button layoutX="50" layoutY="200" text="Iniciar Relógio" />
+    <Button layoutX="150" layoutY="200" text="Definir Alarme" />
+</AnchorPane>

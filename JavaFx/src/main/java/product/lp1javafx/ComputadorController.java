@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.MenuItem;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.TextField;
 
@@ -31,7 +30,16 @@ public class ComputadorController {
     private Label infoComputador;
 
     @FXML
-    private ImageView image;
+    private ImageView imageLigado;
+
+    @FXML
+    private ImageView imageDesligado;
+
+    @FXML
+    private ImageView imageMine;
+
+    @FXML
+    private ImageView imageCs;
 
     @FXML
     private SplitMenuButton selectPrograma;
@@ -40,7 +48,7 @@ public class ComputadorController {
 
     @FXML
     void initialize() {
-        // Define as opções do seletor de programas
+
         selectPrograma.getItems().clear();
         MenuItem minecraftItem = new MenuItem("Minecraft");
         minecraftItem.setOnAction(e -> selectPrograma.setText("Minecraft"));
@@ -49,6 +57,8 @@ public class ComputadorController {
         counterStrikeItem.setOnAction(e -> selectPrograma.setText("Counter Strike"));
 
         selectPrograma.getItems().addAll(minecraftItem, counterStrikeItem);
+
+        imageDesligado.setVisible(true);  // Esconde a primeira imagem
 
     }
 
@@ -70,8 +80,8 @@ public class ComputadorController {
         computador.ligar();
         infoComputador.setText("Computador ligado com " + processador + ", " + memoriaRam + "GB RAM e " + armazenamento + "GB de armazenamento.");
 
-        // Muda a imagem para o computador ligado
-        image.setImage(new Image("/product/lp1javafx/images/computador_ligado.png"));
+        imageDesligado.setVisible(false);
+        imageLigado.setVisible(true);
     }
 
     @FXML
@@ -86,13 +96,14 @@ public class ComputadorController {
                 // Muda a imagem com base no programa selecionado
                 switch (programa) {
                     case "Minecraft":
-                        image.setImage(new Image("/product/lp1javafx/images/mine.png")); // Imagem do Minecraft
+                        imageCs.setVisible(false);
+                        imageMine.setVisible(true);// Imagem do Minecraft
                         break;
                     case "Counter Strike":
-                        image.setImage(new Image("/product/lp1javafx/images/cs.png")); // Imagem do Counter Strike
+                        imageMine.setVisible(false);
+                        imageCs.setVisible(true); // Imagem do Counter Strike
                         break;
                     default:
-                        // Se não corresponder a nenhum programa, mantenha a imagem atual ou adicione um caso padrão
                         break;
                 }
             } else {

@@ -55,7 +55,7 @@ public class MenuController {
     @FXML
     private void openComputadorScreen() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product/lp1javafx/celularView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product/lp1javafx/computadorView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -66,5 +66,37 @@ public class MenuController {
         }
 
     }
+
+    @FXML
+    private void openGeladeiraScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product/lp1javafx/geladeiraView.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Geladeira");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    private void openRelogioScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product/lp1javafx/relogioView.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Geladeira");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 
 }

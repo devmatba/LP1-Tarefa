@@ -16,10 +16,10 @@
        <Button onAction="#openCarroScreen" prefHeight="31.0" prefWidth="116.0" text="Carro" />
       <Button onAction="#openCelularScreen" prefHeight="31.0" prefWidth="116.0" text="Celular" />
       <Button onAction="#openComputadorScreen" prefHeight="31.0" prefWidth="116.0" text="Computador" />
-      <Button prefHeight="31.0" prefWidth="116.0" text="Geladeira" />
+      <Button onAction="#openGeladeiraScreen" prefHeight="31.0" prefWidth="116.0" text="Geladeira" />
       <Button prefHeight="31.0" prefWidth="116.0" text="Livro" />
       <Button prefHeight="31.0" prefWidth="116.0" text="Prato" />
-      <Button prefHeight="31.0" prefWidth="116.0" text="Relogio" />
+      <Button onAction="#openRelogioScreen" prefHeight="31.0" prefWidth="116.0" text="Relogio" />
       <Button prefHeight="31.0" prefWidth="116.0" text="Sofa" />
    </children>
 </VBox>
