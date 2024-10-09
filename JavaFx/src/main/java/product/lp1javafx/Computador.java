@@ -15,24 +15,12 @@ public class Computador {
         return processador;
     }
 
-    public void setProcessador(String processador) {
-        this.processador = processador;
-    }
-
     public int getMemoriaRam() {
         return memoriaRam;
     }
 
-    public void setMemoriaRam(int memoriaRam) {
-        this.memoriaRam = memoriaRam;
-    }
-
     public int getArmazenamento() {
         return armazenamento;
-    }
-
-    public void setArmazenamento(int armazenamento) {
-        this.armazenamento = armazenamento;
     }
 
     public void ligar(){

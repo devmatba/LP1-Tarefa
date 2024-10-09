@@ -21,12 +21,6 @@ public class ComputadorController {
     private TextField txtArmazenamento;
 
     @FXML
-    private Button btnLigar;
-
-    @FXML
-    private Button btnAbrirPrograma;
-
-    @FXML
     private Label infoComputador;
 
     @FXML
@@ -48,38 +42,29 @@ public class ComputadorController {
 
     @FXML
     void initialize() {
-
-        selectPrograma.getItems().clear();
-        MenuItem minecraftItem = new MenuItem("Minecraft");
-        minecraftItem.setOnAction(e -> selectPrograma.setText("Minecraft"));
-
-        MenuItem counterStrikeItem = new MenuItem("Counter Strike");
-        counterStrikeItem.setOnAction(e -> selectPrograma.setText("Counter Strike"));
-
-        selectPrograma.getItems().addAll(minecraftItem, counterStrikeItem);
-
-        imageDesligado.setVisible(true);  // Esconde a primeira imagem
-
+        imageDesligado.setVisible(true);
+        imageLigado.setVisible(false);
+        imageMine.setVisible(false);
+        imageCs.setVisible(false);
     }
 
     @FXML
     void ligarComputador(ActionEvent event) {
         String processador = txtProcessador.getText();
-        int memoriaRam;
-        int armazenamento;
+        String memoriaRamStr = txtMemoriaRam.getText();
+        String armazenamentoStr = txtArmazenamento.getText();
 
-        try {
-            memoriaRam = Integer.parseInt(txtMemoriaRam.getText());
-            armazenamento = Integer.parseInt(txtArmazenamento.getText());
-        } catch (NumberFormatException e) {
-            infoComputador.setText("Memória RAM e Armazenamento devem ser números.");
+        if (processador.isEmpty() || memoriaRamStr.isEmpty() || armazenamentoStr.isEmpty()) {
+            infoComputador.setText("Por favor, preencha todos os campos.");
             return;
         }
 
-        computador = new Computador(processador, memoriaRam, armazenamento);
-        computador.ligar();
-        infoComputador.setText("Computador ligado com " + processador + ", " + memoriaRam + "GB RAM e " + armazenamento + "GB de armazenamento.");
+        int memoriaRam = Integer.parseInt(memoriaRamStr);
+        int armazenamento = Integer.parseInt(armazenamentoStr);
 
+        computador = new Computador(processador, memoriaRam, armazenamento);
+
+        infoComputador.setText("Computador ligado: " + computador.getProcessador() + ", RAM: " + computador.getMemoriaRam() + " GB, Armazenamento: " + computador.getArmazenamento() + " GB");
         imageDesligado.setVisible(false);
         imageLigado.setVisible(true);
     }
@@ -95,13 +80,13 @@ public class ComputadorController {
 
                 // Muda a imagem com base no programa selecionado
                 switch (programa) {
-                    case "Minecraft":
+                    case "League of Legends":
                         imageCs.setVisible(false);
-                        imageMine.setVisible(true);// Imagem do Minecraft
+                        imageMine.setVisible(true);
                         break;
                     case "Counter Strike":
                         imageMine.setVisible(false);
-                        imageCs.setVisible(true); // Imagem do Counter Strike
+                        imageCs.setVisible(true);
                         break;
                     default:
                         break;
@@ -112,5 +97,15 @@ public class ComputadorController {
         } else {
             infoComputador.setText("O computador deve estar ligado primeiro.");
         }
+    }
+
+    @FXML
+    void abrirLol(ActionEvent event) {
+        selectPrograma.setText("League of Legends");
+    }
+
+    @FXML
+    void abrirCs(ActionEvent event) {
+        selectPrograma.setText("Counter Strike");
     }
 }

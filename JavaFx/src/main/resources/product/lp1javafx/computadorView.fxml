@@ -6,52 +6,53 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="475.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.lp1javafx.ComputadorController">
+<AnchorPane prefHeight="656.0" prefWidth="670.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.lp1javafx.ComputadorController">
     <children>
-        <Label layoutX="90.0" layoutY="20.0" text="Computador">
+        <Label layoutX="279.0" layoutY="14.0" text="Computador">
             <font>
-                <Font name="System" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
 
-        <Label layoutX="30.0" layoutY="60.0" text="Processador:" />
-        <TextField fx:id="txtProcessador" layoutX="110.0" layoutY="60.0" prefWidth="160.0" />
+        <Label layoutX="43.0" layoutY="85.0" text="Processador:" />
+        <TextField fx:id="txtProcessador" layoutX="131.0" layoutY="80.0" prefHeight="31.0" prefWidth="235.0" />
 
-        <Label layoutX="30.0" layoutY="100.0" text="Memória RAM (GB):" />
-        <TextField fx:id="txtMemoriaRam" layoutX="150.0" layoutY="100.0" prefWidth="120.0" />
+        <Label layoutX="42.0" layoutY="125.0" text="Memória RAM (GB):" />
+        <TextField fx:id="txtMemoriaRam" layoutX="191.0" layoutY="120.0" prefHeight="31.0" prefWidth="174.0" />
 
-        <Label layoutX="30.0" layoutY="140.0" text="Armazenamento (GB):" />
-        <TextField fx:id="txtArmazenamento" layoutX="170.0" layoutY="140.0" prefWidth="100.0" />
+        <Label layoutX="42.0" layoutY="165.0" text="Armazenamento (GB):" />
+        <TextField fx:id="txtArmazenamento" layoutX="191.0" layoutY="160.0" prefHeight="31.0" prefWidth="174.0" />
 
-        <Button fx:id="btnLigar" layoutX="30.0" layoutY="180.0" onAction="#ligarComputador" text="Ligar" />
-        <Button fx:id="btnAbrirPrograma" layoutX="150.0" layoutY="180.0" onAction="#abrirPrograma" text="Abrir Programa" />
-
-        <Label fx:id="infoComputador" layoutX="30.0" layoutY="260.0" prefHeight="50.0" prefWidth="240.0" textAlignment="CENTER" />
-      <ImageView fx:id="imageDesligado" fitHeight="150.0" fitWidth="200.0" layoutX="71.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+        <Button fx:id="btnLigar" layoutX="454.0" layoutY="111.0" onAction="#ligarComputador" prefHeight="49.0" prefWidth="99.0" text="Ligar" />
+        <Button fx:id="btnAbrirPrograma" layoutX="366.0" layoutY="254.0" onAction="#abrirPrograma" text="Abrir Programa" />
+      <ImageView fx:id="imageDesligado" fitHeight="350.0" fitWidth="400.0" layoutX="164.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/computador_desligado.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageLigado" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imageLigado" fitHeight="350.0" fitWidth="400.0" layoutX="164.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/computador_ligado.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageMine" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imageMine" fitHeight="350.0" fitWidth="400.0" layoutX="164.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/mine.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageCs" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imageCs" fitHeight="350.0" fitWidth="400.0" layoutX="164.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@images/cs.png" />
+            <Image url="@images/cs.gif" />
          </image>
       </ImageView>
-      <SplitMenuButton fx:id="selectPrograma" layoutX="73.0" layoutY="222.0" mnemonicParsing="false" scaleShape="false" text="Selecione o Programa">
+      <SplitMenuButton fx:id="selectPrograma" layoutX="140.0" layoutY="254.0" mnemonicParsing="false" scaleShape="false" text="Selecione o Programa">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem fx:id="lol" mnemonicParsing="false" onAction="#abrirLol" text="League of legends" />
+          <MenuItem fx:id="cs" mnemonicParsing="false" onAction="#abrirCs" text="CS" />
         </items>
       </SplitMenuButton>
+
+        <Label fx:id="infoComputador" layoutX="199.0" layoutY="299.0" prefHeight="21.0" prefWidth="363.0" textAlignment="CENTER" />
+      <Label fx:id="infoComputador1" layoutX="217.0" layoutY="204.0" prefHeight="21.0" prefWidth="363.0" textAlignment="CENTER" />
     </children>
 </AnchorPane>

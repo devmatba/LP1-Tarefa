@@ -1,39 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="335.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.lp1javafx.CarroController">
+<AnchorPane prefHeight="558.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.lp1javafx.CarroController">
     <children>
-        <Label layoutX="166.0" layoutY="14.0" text="Carro" textAlignment="CENTER">
+        <Label layoutX="311.0" layoutY="23.0" text="Carro" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
 
-        <Text layoutX="20.0" layoutY="77.0" text="Marca:" />
-        <TextField fx:id="txtMarca" layoutX="86.0" layoutY="56.0" prefHeight="31.0" prefWidth="246.0" />
+        <Text layoutX="379.0" layoutY="339.0" text="Marca:" />
+        <TextField fx:id="txtMarca" layoutX="428.0" layoutY="318.0" prefHeight="31.0" prefWidth="192.0" />
 
-        <Text layoutX="20.0" layoutY="117.0" text="Modelo:" />
-        <TextField fx:id="txtModelo" layoutX="86.0" layoutY="96.0" prefHeight="31.0" prefWidth="246.0" />
+        <Text layoutX="43.0" layoutY="339.0" text="Modelo:" />
+        <TextField fx:id="txtModelo" layoutX="104.0" layoutY="318.0" prefHeight="31.0" prefWidth="192.0" />
 
-        <Text layoutX="20.0" layoutY="157.0" text="Velocidade Máxima (km/h):" />
-        <TextField fx:id="txtVelocidadeMaxima" layoutX="200.0" layoutY="136.0" prefHeight="31.0" prefWidth="132.0" />
+        <Text layoutX="44.0" layoutY="389.0" text="Velocidade Máxima (km/h):" />
+        <TextField fx:id="txtVelocidadeMaxima" layoutX="230.0" layoutY="368.0" prefHeight="31.0" prefWidth="132.0" />
 
-        <Button fx:id="btnCriarCarro" layoutX="150.0" layoutY="180.0" mnemonicParsing="false" onAction="#criarCarro" text="Adicionar" />
+        <Button fx:id="btnCriarCarro" layoutX="483.0" layoutY="368.0" mnemonicParsing="false" onAction="#criarCarro" text="Adicionar" />
 
-        <Label fx:id="infoCarro" contentDisplay="CENTER" layoutX="20.0" layoutY="220.0" prefHeight="21.0" prefWidth="360.0" textAlignment="CENTER" />
+        <Label fx:id="infoCarro" contentDisplay="CENTER" layoutX="200.0" layoutY="426.0" prefHeight="21.0" prefWidth="360.0" textAlignment="CENTER" />
 
-        <HBox layoutX="67.0" layoutY="262.0" spacing="10.0">
+        <HBox layoutX="211.0" layoutY="463.0" spacing="20.0">
             <children>
+                <Button mnemonicParsing="false" onAction="#ligarMotor" text="Ligar Motor" />
                 <Button mnemonicParsing="false" onAction="#acelerar" text="Acelerar" />
                 <Button mnemonicParsing="false" onAction="#frear" text="Frear" />
-                <Button mnemonicParsing="false" onAction="#ligarMotor" text="Ligar Motor" />
             </children>
         </HBox>
 
-        <Label fx:id="acaoCarro" contentDisplay="CENTER" layoutX="20.0" layoutY="300.0" prefHeight="21.0" prefWidth="360.0" textAlignment="CENTER" />
+        <Label fx:id="acaoCarro" contentDisplay="CENTER" layoutX="200.0" layoutY="511.0" prefHeight="21.0" prefWidth="360.0" textAlignment="CENTER" />
+      <ImageView fx:id="freiando" fitHeight="249.0" fitWidth="332.0" layoutX="170.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/freiar.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="acelerando" fitHeight="158.0" fitWidth="341.0" layoutX="169.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/Acelerar.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ligando" fitHeight="249.0" fitWidth="332.0" layoutX="180.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/Ligar.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carros" fitHeight="249.0" fitWidth="332.0" layoutX="178.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/img5ffa74170fca96.40118477.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

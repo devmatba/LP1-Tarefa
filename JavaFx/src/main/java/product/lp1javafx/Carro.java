@@ -35,5 +35,16 @@ public class Carro {
         this.marca = marca;
     }
 
+    public void acelerar() {
+        System.out.println("Acelerando meu " + marca + " " + modelo + " a " + velocidadeMaxima );
+    }
+
+    public void frear() {
+        System.out.println("Freiando!");
+    }
+
+    public void ligarMotor() {
+        System.out.println("Ligando o motor Vruuum, vruuum, vruuuuuum...");
+    }
 
 }
