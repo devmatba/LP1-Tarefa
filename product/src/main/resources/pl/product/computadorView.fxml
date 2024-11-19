@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="670.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.product.controllers.ComputadorController">
+   <children>
+      <ImageView fx:id="img" fitHeight="520.0" fitWidth="474.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/computador_desligado.png" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="52.0" prefWidth="672.0" style="-fx-background-color: #082161;">
+         <children>
+            <Label layoutX="268.0" layoutY="12.0" text="COMPUTADOR" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableProgramas" layoutX="84.0" layoutY="410.0" prefHeight="119.0" prefWidth="333.0">
+        <columns>
+          <TableColumn fx:id="columnProgramas" prefWidth="332.8000007629395" text="PROGRAMAS" />
+        </columns>
+      </TableView>
+      <Button layoutX="569.0" layoutY="266.0" mnemonicParsing="false" onAction="#instalarPrograma" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #008000;" text="Instalar" textFill="WHITE" />
+      <Button layoutX="497.0" layoutY="266.0" mnemonicParsing="false" onAction="#removerPrograma" style="-fx-background-color: #fc0303;" text="Remover" textFill="WHITE" />
+      <Button layoutX="497.0" layoutY="175.0" mnemonicParsing="false" onAction="#selecionePrograma" prefHeight="26.0" prefWidth="135.0" text="Selecione o Programa" />
+      <TableView fx:id="tableMonitoramento" layoutX="460.0" layoutY="410.0" prefHeight="119.0" prefWidth="193.0">
+        <columns>
+          <TableColumn fx:id="columnComponente" prefWidth="100.79998779296875" text="COMPONENTE" />
+          <TableColumn fx:id="columnUso" prefWidth="93.60003662109375" text="USO" />
+        </columns>
+      </TableView>
+      <Label layoutX="505.0" layoutY="211.0" />
+      <Label layoutX="515.0" layoutY="384.0" text="Monitoramento">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomeProgramaSelecionado" layoutX="497.0" layoutY="219.0" prefHeight="18.0" prefWidth="135.0" />
+      <ImageView fitHeight="103.0" fitWidth="80.0" layoutX="483.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/ligar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="80.0" layoutX="565.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/desligar.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="565.0" layoutY="83.0" mnemonicParsing="false" onAction="#desligar" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="Ligar" />
+      <Button layoutX="483.0" layoutY="83.0" mnemonicParsing="false" onAction="#ligar" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="Desligar" />
+      <Button layoutX="510.0" layoutY="313.0" mnemonicParsing="false" onAction="#abrirPrograma" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #008000;" text="Abrir Programa" textFill="WHITE" />
+      <Button layoutX="510.0" layoutY="346.0" mnemonicParsing="false" onAction="#ligar" style="-fx-background-color: #fc0303;" text="Fechar Programa" textFill="WHITE" />
+   </children>
+</AnchorPane>
